@@ -1,3 +1,5 @@
+import 'package:defisit/pages/login.dart';
+import 'package:defisit/pages/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -98,6 +100,61 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: BottomNavigationBar(
+                    items: const <BottomNavigationBarItem>[
+                      BottomNavigationBarItem(
+                        icon: Icon(Icons.home),
+                        label: 'Home',
+                      ),
+                      BottomNavigationBarItem(
+                        icon: Icon(Icons.shopping_cart),
+                        label: 'Cart',
+                      ),
+                      BottomNavigationBarItem(
+                        icon: Icon(Icons.receipt),
+                        label: 'Orders',
+                      ),
+                      BottomNavigationBarItem(
+                        icon: Icon(Icons.account_circle),
+                        label: 'Account',
+                      ),
+                    ],
+                    currentIndex: 0, // Set the initial selected index
+                    selectedItemColor: Colors.blue, // Set the selected label color
+                    unselectedItemColor: Colors.grey, // Set the unselected label color
+                    onTap: (index) {
+                      // Handle item tap
+                      switch (index) {
+                        case 0:
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(builder: (context) => const LoginPage()),
+                          // );
+                          break;
+                        // case 1:
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(builder: (context) => const CartPage()),
+                        // );
+                        // break;
+                        // case 2:
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(builder: (context) => const OrdersPage()),
+                        // );
+                        // break;
+                        case 3:
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const Profile()),
+                          );
+                          break;
+                      }
+                    },
+                  ),
+                )
           // Add more widgets to display restaurants, food items, etc.
         ],
       ),
