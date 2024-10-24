@@ -12,7 +12,7 @@ class Defisit extends StatelessWidget {
     return const MaterialApp(
       title: "Defisit",
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: Home(),
     );
   }
 }
