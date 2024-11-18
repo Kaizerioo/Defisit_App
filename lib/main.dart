@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:defisit/pages/splash.dart';
 
 class Defisit extends StatelessWidget {
   const Defisit({super.key});
@@ -12,7 +13,7 @@ class Defisit extends StatelessWidget {
     return const MaterialApp(
       title: "Defisit",
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: SplashScreen(),
     );
   }
 }
